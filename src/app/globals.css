@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  /* Default Dark Theme Variables */
+  --bg-primary: #0B0D12;
+  --bg-surface: #12151C;
+  --bg-elevated: #191D26;
+  --border-subtle: #262B36;
+  --border-strong: #363C4A;
+  --text-primary: #F3F5F8;
+  --text-secondary: #9AA3B2;
+  --text-muted: #5C6472;
+  --accent-primary: #6E5BFF;
+  --accent-secondary: #22D3C7;
+  --accent-warn: #F2B84B;
+  --accent-danger: #F0555E;
+  --accent-success: #3DD68C;
+
+  /* Badge Fixed Colors */
+  --badge-beginner-bg: rgba(61, 214, 140, 0.15);
+  --badge-beginner-border: rgba(61, 214, 140, 0.35);
+  --badge-beginner-text: #3DD68C;
+
+  --badge-intermediate-bg: rgba(242, 184, 75, 0.15);
+  --badge-intermediate-border: rgba(242, 184, 75, 0.35);
+  --badge-intermediate-text: #F2B84B;
+
+  --badge-advanced-bg: rgba(240, 85, 94, 0.15);
+  --badge-advanced-border: rgba(240, 85, 94, 0.35);
+  --badge-advanced-text: #F0555E;
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Shadow & Glow */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.2);
+  --focus-ring: 0 0 0 3px rgba(110, 91, 255, 0.35);
+}
+
+[data-theme='light'] {
+  --bg-primary: #F7F8FB;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #FFFFFF;
+  --border-subtle: #E6E8EE;
+  --border-strong: #D4D8E2;
+  --text-primary: #14171F;
+  --text-secondary: #565E6D;
+  --text-muted: #8A93A3;
+  --accent-primary: #5B3EF2;
+  --accent-secondary: #0DA89B;
+  --accent-warn: #B9740E;
+  --accent-danger: #D8323B;
+  --accent-success: #1E9A5A;
+
+  --shadow-subtle: 0 4px 20px rgba(20, 23, 31, 0.08);
+  --shadow-card: 0 2px 12px rgba(20, 23, 31, 0.06);
+  --focus-ring: 0 0 0 3px rgba(91, 62, 242, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  line-height: 1.15;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Signature AI Gradient Border */
+.ai-gradient-top-border {
+  position: relative;
+}
+.ai-gradient-top-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+/* Focus Ring Accessibility */
+*:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.96); }
+}
+
+@keyframes skeletonShine {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.skeleton-loading {
+  background: linear-gradient(90deg, var(--bg-elevated) 0%, var(--border-subtle) 50%, var(--bg-elevated) 100%);
+  background-size: 400px 100%;
+  animation: skeletonShine 1.5s infinite linear;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
