@@ -437,3 +437,4 @@ The final application must be:
 - Free of authentication, database, persistent history, real resume OCR, voice/video, and mobile-app scope
 
 Before considering the build complete, verify every acceptance criterion in the technical specification and every required screen/state in the interface design specification.
+ end .
