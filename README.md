@@ -1,25 +1,262 @@
-# Synapse AI
+# TEAM NAME - 404 CODER
 
-An AI-interview practice app built with Next.js, Prisma, and SQLite. Users can create an account, upload a resume, complete a tailored interview, and review a scored report and transcript.
+# - TEAM MEMBER
+- AMIT MODANWAL
+- ADITYA SHAH
+- JATIN
 
-## Run locally
+# LIVE DEMO - 
 
-1. Install dependencies: `npm install`
-2. Copy the environment template: `Copy-Item .env.example .env` (PowerShell) or `cp .env.example .env` (macOS/Linux).
-3. Set a unique `JWT_SECRET` in `.env` before production use.
-4. Initialize the local database: `npm run db:push`
-5. Load demo candidates (optional): `npm run db:seed`
-6. Start the app: `npm run dev`
+# PROJECT STRUTURE
 
-Open [http://localhost:3000](http://localhost:3000). Demo candidate accounts use the password `demo-password` after seeding.
+THE-INTERVIEW-AGENT/
+│
+├── public/
+│   └── assets/
+│
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── auth/
+│   │   │   │   └── login/
+│   │   │   └── candidates/
+│   │   │
+│   │   ├── login/
+│   │   ├── dashboard/
+│   │   ├── interview/
+│   │   ├── report/
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   │   └── UI Components
+│   │
+│   ├── lib/
+│   │   ├── auth.ts
+│   │   └── db.ts
+│   │
+│   └── data/
+│
+├── prisma/
+│   └── schema.prisma
+│
+├── .env.example
+├── .gitignore
+├── next.config.mjs
+├── package.json
+├── tsconfig.json
+└── README.md
 
-## Production check
 
-Run `npm run build` to create and verify the production build.
+# PROJECT NAME - 🤖 SYNAPSE AI
 
-## Team
+> An AI-powered technical interview platform that conducts personalized, adaptive, and realistic interviews based on a candidate's learning journey.
 
-404 CODER — Amit Modanwal, Jatin, and Aditya Shah.
+## IDEA - 🚀 Overview
+
+AI Interview Agent is an intelligent interview platform designed to help learners prepare for real-world technical interviews.
+
+Instead of following a fixed list of questions, the AI interviewer analyzes the candidate's responses, maintains conversation context, asks intelligent follow-up questions, and evaluates the candidate at the end of the interview.
+
+The platform is especially designed for learners who have completed an AI Engineering / AI Cohort covering technologies such as:
+
+- Retrieval-Augmented Generation (RAG)
+- Vector Databases
+- Prompt Engineering
+- Agentic AI
+- Model Context Protocol (MCP)
+- AI Deployment
+- Production AI Systems
+
+The goal is to simulate a realistic technical interview experience rather than a scripted questionnaire.
+
+---
+
+## 🎯 Problem Statement
+
+Learning AI engineering concepts is only one part of becoming interview-ready.
+
+Many learners struggle to:
+
+- Explain technical concepts clearly
+- Answer follow-up questions
+- Connect different AI concepts
+- Explain engineering decisions
+- Handle real interview pressure
+- Identify weaknesses in their technical knowledge
+- Communicate their projects effectively
+
+Traditional interview preparation tools often use predefined questions and do not adapt to the candidate's answers.
+
+### Our Solution
+
+AI Interview Agent provides a dynamic AI-powered interviewer that:
+
+1. Understands the candidate's learning journey
+2. Generates personalized questions
+3. Conducts multi-turn interviews
+4. Maintains conversation context
+5. Evaluates candidate responses
+6. Asks intelligent follow-up questions
+7. Generates actionable feedback and performance reports
+
+---
+
+## ✨ Key Features
+
+### 🧠 Personalized Interviews
+
+The AI generates interview questions based on the candidate's completed learning topics and selected interview type.
+
+### 🔄 Adaptive Follow-Up Questions
+
+The interviewer dynamically changes the next question based on the candidate's previous answer.
+
+For example:
+
+Candidate:
+
+> "RAG helps reduce hallucination by grounding the model with retrieved information."
+
+AI Interviewer:
+
+> "Good. How would you decide whether to use a vector database or keyword search for retrieval?"
+
+This creates a realistic interview conversation.
+
+### 💬 Multi-Turn Conversation
+
+The AI maintains context throughout the interview instead of treating every answer as an independent question.
+
+### 📚 Technical Topic Assessment
+
+The platform can evaluate knowledge in areas such as:
+
+- RAG
+- Vector Databases
+- Prompt Engineering
+- Agentic AI
+- MCP
+- LLM Applications
+- AI Deployment
+- Production AI Systems
+- System Design
 
 
 
+### 📝 Text-Based Interview
+
+Candidates can also type their answers when voice interaction is not preferred.
+
+### 📄 Resume-Based Personalization
+
+Candidates can optionally upload their resume so that interview questions can be personalized around their skills and projects.
+
+### 📊 AI Evaluation
+
+The system evaluates candidates across multiple dimensions:
+
+- Technical Knowledge
+- Accuracy
+- Communication
+- Confidence
+- Problem Solving
+- Depth of Understanding
+- Answer Relevance
+- Clarity
+
+### 📈 Performance Dashboard
+
+Candidates can view their interview performance through a dashboard containing:
+
+- Overall Score
+- Technical Score
+- Communication Score
+- Confidence Score
+- Topic-wise Performance
+- Strengths
+- Weaknesses
+- Improvement Suggestions
+
+### 📑 Detailed Interview Report
+
+After completing an interview, the platform generates a detailed report containing:
+
+- Overall performance
+- Question-by-question evaluation
+- Correctness analysis
+- Strengths
+- Weaknesses
+- Recommended topics
+- Personalized improvement plan
+
+---
+
+# 🏗️ System Workflow
+
+```text
+                    ┌──────────────────┐
+                    │      Login       │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                  ┌─────────────────────┐
+                  │ Candidate Dashboard │
+                  └──────────┬──────────┘
+                             │
+                             ▼
+                ┌────────────────────────┐
+                │ Select Interview Type  │
+                │                        │
+                │ • AI Engineering       │
+                │ • RAG                  │
+                │ • Agentic AI           │
+                │ • System Design        │
+                └───────────┬────────────┘
+                            │
+                            ▼
+                  ┌────────────────────┐
+                  │ Resume Upload      │
+                  │     (Optional)     │
+                  └─────────┬──────────┘
+                            │
+                            ▼
+                ┌────────────────────────┐
+                │ AI Generates Question  │
+                └───────────┬────────────┘
+                            │
+                            ▼
+                  ┌────────────────────┐
+                  │ Candidate Answers  │
+                  │                    │
+                  │ Text / Voice       │
+                  └─────────┬──────────┘
+                            │
+                            ▼
+                ┌────────────────────────┐
+                │ AI Evaluates Response │
+                └───────────┬────────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Follow-up Question  │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                     ┌──────────────┐
+                     │ Next Question │
+                     └──────┬───────┘
+                            │
+                            ▼
+                   ┌─────────────────┐
+                   │ Interview Ends  │
+                   └────────┬────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │ AI Performance Report│
+                 └──────────────────────┘
+
+
+
+# 404 CODER
+- Built with ❤️ for AI Engineering and technical interview preparation
