@@ -1,4 +1,4 @@
-// File: C:\Users\jatin\Desktop\Synapse_AI\src\app\(authenticated)\transcript\[interviewId]\page.tsx
+// File: C:\Users\jatin\Desktop\amit\src\app\(authenticated)\transcript\[interviewId]\page.tsx
 import * as entry from '../../../../../../src/app/(authenticated)/transcript/[interviewId]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

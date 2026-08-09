@@ -1,0 +1,7 @@
+# Generated dependencies and build output
+node_modules/
+.next/
+.next-build/
+
+# Local environment files
+.env.local

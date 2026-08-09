@@ -1,4 +1,4 @@
-// File: C:\Users\jatin\Desktop\Synapse_AI\src\app\(authenticated)\dashboard\page.tsx
+// File: C:\Users\jatin\Desktop\amit\src\app\(authenticated)\dashboard\page.tsx
 import * as entry from '../../../../../src/app/(authenticated)/dashboard/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
