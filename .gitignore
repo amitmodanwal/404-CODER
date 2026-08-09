@@ -1,7 +1,19 @@
-# Generated dependencies and build output
+# Dependencies and generated build output
 node_modules/
 .next/
 .next-build/
 
-# Local environment files
-.env.local
+# Local environment files and credentials
+.env
+.env.*
+!.env.example
+
+# Local SQLite databases and write-ahead log files
+*.db
+*.db-shm
+*.db-wal
+
+# Logs and operating-system files
+*.log
+.DS_Store
+Thumbs.db
