@@ -7,44 +7,72 @@
 
 # LIVE DEMO - 
 
-# PROJECT STRUTURE
+## 📁 Project Structure
 
+```text
 THE-INTERVIEW-AGENT/
 │
 ├── public/
+│   ├── images/
 │   └── assets/
-│
-├── src/
-│   ├── app/
-│   │   ├── api/
-│   │   │   ├── auth/
-│   │   │   │   └── login/
-│   │   │   └── candidates/
-│   │   │
-│   │   ├── login/
-│   │   ├── dashboard/
-│   │   ├── interview/
-│   │   ├── report/
-│   │   └── page.tsx
-│   │
-│   ├── components/
-│   │   └── UI Components
-│   │
-│   ├── lib/
-│   │   ├── auth.ts
-│   │   └── db.ts
-│   │
-│   └── data/
 │
 ├── prisma/
 │   └── schema.prisma
 │
+├── src/
+│   │
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── auth/
+│   │   │   │   └── login/
+│   │   │   │       └── route.ts
+│   │   │   │
+│   │   │   └── candidates/
+│   │   │       └── route.ts
+│   │   │
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── interview/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── report/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   │   ├── Navbar.tsx
+│   │   ├── Sidebar.tsx
+│   │   ├── InterviewCard.tsx
+│   │   ├── QuestionCard.tsx
+│   │   ├── VoiceInterview.tsx
+│   │   ├── ScoreCard.tsx
+│   │   └── ReportCard.tsx
+│   │
+│   ├── lib/
+│   │   ├── auth.ts
+│   │   ├── db.ts
+│   │   └── utils.ts
+│   │
+│   └── data/
+│       └── candidates.json
+│
+├── .env
 ├── .env.example
 ├── .gitignore
 ├── next.config.mjs
 ├── package.json
+├── package-lock.json
 ├── tsconfig.json
-└── README.md
+├── next-env.d.ts
+├── README.md
+└── prompt.md
 
 
 # PROJECT NAME - 🤖 SYNAPSE AI
