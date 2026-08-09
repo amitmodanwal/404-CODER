@@ -1,3 +1,9 @@
 {
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/interview/[interviewId]/page": "app/interview/[interviewId]/page.js",
+  "/login/page": "app/login/page.js",
+  "/about/page": "app/about/page.js",
+  "/(authenticated)/dashboard/page": "app/(authenticated)/dashboard/page.js",
+  "/(authenticated)/report/[interviewId]/page": "app/(authenticated)/report/[interviewId]/page.js",
+  "/(authenticated)/reports/page": "app/(authenticated)/reports/page.js"
 }
